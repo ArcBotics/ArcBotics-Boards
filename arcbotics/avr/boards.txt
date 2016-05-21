@@ -1,0 +1,91 @@
+# ArcBotics Board Contribution Configuration
+#
+# For more information see:
+# * https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5---3rd-party-Hardware-specification
+# * https://github.com/arduino/Arduino/wiki/Arduino-Hardware-Cores-migration-guide-from-1.0-to-1.6
+#
+
+menu.cpu=Processor
+
+################################################################################
+################################### Sparki  ####################################
+################################################################################
+sparki.name=ArcBotics Sparki
+sparki.vid.0=0x27C2
+sparki.pid.0=0x0003
+sparki.vid.1=0x27C2
+sparki.pid.1=0x0003
+sparki.vid.2=0x27C2
+sparki.pid.2=0x0004
+sparki.vid.3=0x27C2
+sparki.pid.3=0x0004
+
+sparki.upload.tool=avrdude
+sparki.upload.protocol=avr109
+sparki.upload.maximum_size=28672
+sparki.upload.maximum_data_size=2560
+sparki.upload.speed=57600
+sparki.upload.disable_flushing=true
+sparki.upload.use_1200bps_touch=true
+sparki.upload.wait_for_upload_port=true
+
+sparki.bootloader.tool=avrdude
+sparki.bootloader.low_fuses=0xff
+sparki.bootloader.high_fuses=0xd8
+sparki.bootloader.extended_fuses=0xcb
+sparki.bootloader.file=caterina/Sparki_Bootloader_v3.hex
+sparki.bootloader.unlock_bits=0x3F
+sparki.bootloader.lock_bits=0x2F
+
+sparki.build.mcu=atmega32u4
+sparki.build.f_cpu=16000000L
+sparki.build.vid=0x27C2
+sparki.build.pid=0x0004
+sparki.build.usb_product="ArcBotics Sparki"
+sparki.build.usb_manufacturer="ArcBotics"
+sparki.build.extra_flags={build.usb_flags}
+sparki.build.board=AVR_LEONARDO
+sparki.build.core=arduino
+sparki.build.variant=sparki
+
+
+################################################################################
+################################ Servotor32  ###################################
+################################################################################
+servotor32.name=ArcBotics Servotor32
+servotor32.vid.0=0x27C2
+servotor32.pid.0=0x0001
+servotor32.vid.1=0x27C2
+servotor32.pid.1=0x0001
+servotor32.vid.2=0x27C2
+servotor32.pid.2=0x0002
+servotor32.vid.3=0x27C2
+servotor32.pid.3=0x0002
+
+servotor32.upload.tool=avrdude
+servotor32.upload.protocol=avr109
+servotor32.upload.maximum_size=28672
+servotor32.upload.maximum_data_size=2560
+servotor32.upload.speed=57600
+servotor32.upload.disable_flushing=true
+servotor32.upload.use_1200bps_touch=true
+servotor32.upload.wait_for_upload_port=true
+
+servotor32.bootloader.tool=avrdude
+servotor32.bootloader.low_fuses=0xff
+servotor32.bootloader.high_fuses=0xd8
+servotor32.bootloader.extended_fuses=0xcb
+servotor32.bootloader.file=caterina/Servotor-Bootloader-v1.2.hex
+servotor32.bootloader.unlock_bits=0x3F
+servotor32.bootloader.lock_bits=0x2F
+
+servotor32.build.mcu=atmega32u4
+servotor32.build.f_cpu=16000000L
+servotor32.build.vid=0x27C2
+servotor32.build.pid=0x0002
+servotor32.build.usb_product="ArcBotics Servotor32"
+servotor32.build.usb_manufacturer="ArcBotics"
+servotor32.build.extra_flags={build.usb_flags}
+servotor32.build.board=AVR_LEONARDO
+servotor32.build.core=arduino
+servotor32.build.variant=servotor32

@@ -1,0 +1,79 @@
+; Copyright 2012 Blacklabel Development, Inc.
+
+[Strings]
+DriverPackageDisplayName="Sparki USB Driver"
+ManufacturerName="ArcBotics LLC (www.arcbotics.com)"
+ServiceName="USB RS-232 Emulation Driver"
+sparki.sketch.name="Sparki Programed"
+leonardo.sketch.name="Sparki Programed"
+sparki.bootloader.name="Sparki Bootloader"
+
+
+[DefaultInstall]
+CopyINF=sparki_combo.inf
+
+[Version]
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Signature="$Windows NT$"
+Provider=%ManufacturerName%
+DriverPackageDisplayName=%DriverPackageDisplayName%
+CatalogFile=sparki_combo.cat
+DriverVer=02/18/2016,1.6.8.1
+
+[Manufacturer]
+%ManufacturerName%=DeviceList, NTamd64, NTia64
+
+[DestinationDirs]
+FakeModemCopyFileSection=12
+DefaultDestDir=12
+
+[DeviceList]
+%sparki.sketch.name%=DriverInstall,USB\VID_27C2&PID_0004&REV_0100
+%sparki.sketch.name%=DriverInstall,USB\VID_27C2&PID_0004
+%sparki.bootloader.name%=DriverInstall,USB\VID_27C2&PID_0003&REV_0100
+%sparki.bootloader.name%=DriverInstall,USB\VID_27C2&PID_0003
+%leonardo.sketch.name%=DriverInstall,USB\VID_2341&PID_8036&REV_0100
+%leonardo.sketch.name%=DriverInstall,USB\VID_2341&PID_8036
+
+
+[DeviceList.NTamd64]
+%sparki.sketch.name%=DriverInstall,USB\VID_27C2&PID_0004&REV_0100
+%sparki.sketch.name%=DriverInstall,USB\VID_27C2&PID_0004
+%sparki.bootloader.name%=DriverInstall,USB\VID_27C2&PID_0003&REV_0100
+%sparki.bootloader.name%=DriverInstall,USB\VID_27C2&PID_0003
+%leonardo.sketch.name%=DriverInstall,USB\VID_2341&PID_8036&REV_0100
+%leonardo.sketch.name%=DriverInstall,USB\VID_2341&PID_8036
+
+
+[DeviceList.NTia64]
+%sparki.sketch.name%=DriverInstall,USB\VID_27C2&PID_0004&REV_0100
+%sparki.sketch.name%=DriverInstall,USB\VID_27C2&PID_0004
+%sparki.bootloader.name%=DriverInstall,USB\VID_27C2&PID_0004&REV_0100
+%sparki.bootloader.name%=DriverInstall,USB\VID_27C2&PID_0004
+%leonardo.sketch.name%=DriverInstall,USB\VID_2341&PID_8036&REV_0100
+%leonardo.sketch.name%=DriverInstall,USB\VID_2341&PID_8036
+
+
+[DriverInstall]
+include=mdmcpq.inf,usb.inf
+CopyFiles = FakeModemCopyFileSection
+AddReg=DriverAddReg
+
+[DriverAddReg]
+HKR,,DevLoader,,*ntkern 
+HKR,,NTMPDriver,,usbser.sys 
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+
+[DriverInstall.Services]
+include=mdmcpq.inf
+AddService=usbser, 0x00000002, DriverService
+
+[DriverService]
+DisplayName=%ServiceName%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\usbser.sys
+LoadOrderGroup=Base
+

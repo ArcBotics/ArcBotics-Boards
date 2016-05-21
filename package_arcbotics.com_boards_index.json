@@ -1,0 +1,45 @@
+{
+  "packages": [
+    {
+      "name": "ArcBotics Boards",
+      "maintainer": "ArcBotics",
+      "websiteURL": "https://github.com/arcbotics",
+      "email": "help@arcbotics.com",
+      "help": {
+        "online": "http://arcbotics.com/support"
+      },
+      "platforms": [
+        {
+          "name": "ArcBotics Boards",
+          "architecture": "avr",
+          "version": "1.6.9.2",
+          "category": "Contributed",
+          "help": {
+            "online": "http://arcbotics.com/support"
+          },
+          "url": "http://download.arcbotics.com/ArcBotics_Boards_1.6.9.2.zip",
+          "archiveFileName": "ArcBotics_Boards_1.6.9.2.zip",
+          "checksum": "SHA-256:08d7e10b9337b4364e04f34d0bee266807fea324a2fa67893621b1323bdb499e",
+          "size": "1030825",
+          "boards": [
+            {"name": "ArcBotics Sparki"},
+			{"name": "ArcBotics Servotor32"},
+          ],
+          "toolsDependencies": [
+            {
+              "packager": "arduino",
+              "name": "avr-gcc",
+              "version": "4.8.1-arduino5"
+            },
+            {
+              "packager": "arduino",
+              "name": "avrdude",
+              "version": "6.0.1-arduino5"
+            }
+          ]
+        },
+      ],
+      "tools":[]
+    }
+  ]
+}
