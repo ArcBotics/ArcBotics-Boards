@@ -19,7 +19,7 @@
           },
           "url": "https://github.com/ArcBotics/ArcBotics-Boards/raw/master/ArcBotics_Boards_1.6.9.zip",
           "archiveFileName": "ArcBotics_Boards_1.6.9.zip",
-          "checksum": "SHA-256:9c1e769725c81dea638a8edf64d19f33bd87dd5a60513deb72929273c9c4c6a3",
+          "checksum": "SHA-256:dfeb367c0c0f75d42435f3449cd0d7d02ea915111648207ce37a0b2a146dbbe2",
           "size": "1030053",
           "boards": [
             {"name": "ArcBotics Sparki"},
