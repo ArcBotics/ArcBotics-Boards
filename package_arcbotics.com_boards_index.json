@@ -17,9 +17,9 @@
           "help": {
             "online": "http://arcbotics.com/support"
           },
-          "url": "http://download.arcbotics.com/ArcBotics_Boards_1.6.9.2.zip",
+          "url": "https://github.com/ArcBotics/ArcBotics-Boards/raw/master/ArcBotics_Boards_1.6.9.2.zip",
           "archiveFileName": "ArcBotics_Boards_1.6.9.2.zip",
-          "checksum": "SHA-256:08d7e10b9337b4364e04f34d0bee266807fea324a2fa67893621b1323bdb499e",
+          "checksum": "SHA-256:27f10ef44c5945f60e5db445ad223abee5029c0bf02e18168e6dc5cd30b21e8c",
           "size": "1030825",
           "boards": [
             {"name": "ArcBotics Sparki"},
