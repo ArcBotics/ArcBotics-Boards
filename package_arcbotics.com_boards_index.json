@@ -12,18 +12,18 @@
         {
           "name": "ArcBotics Boards",
           "architecture": "avr",
-          "version": "1.6.9.2",
+          "version": "1.6.9",
           "category": "Contributed",
           "help": {
             "online": "http://arcbotics.com/support"
           },
-          "url": "https://github.com/ArcBotics/ArcBotics-Boards/raw/master/ArcBotics_Boards_1.6.9.2.zip",
-          "archiveFileName": "ArcBotics_Boards_1.6.9.2.zip",
-          "checksum": "SHA-256:27f10ef44c5945f60e5db445ad223abee5029c0bf02e18168e6dc5cd30b21e8c",
-          "size": "1030825",
+          "url": "https://github.com/ArcBotics/ArcBotics-Boards/raw/master/ArcBotics_Boards_1.6.9.zip",
+          "archiveFileName": "ArcBotics_Boards_1.6.9.zip",
+          "checksum": "SHA-256:9c1e769725c81dea638a8edf64d19f33bd87dd5a60513deb72929273c9c4c6a3",
+          "size": "1030053",
           "boards": [
             {"name": "ArcBotics Sparki"},
-			{"name": "ArcBotics Servotor32"},
+			{"name": "ArcBotics Servotor32"}
           ],
           "toolsDependencies": [
             {
@@ -37,7 +37,7 @@
               "version": "6.0.1-arduino5"
             }
           ]
-        },
+        }
       ],
       "tools":[]
     }
